@@ -67,6 +67,16 @@ namespace TestAnimalLibrary
         }
 
         [TestMethod]
+        public void TestAnimalPrint() //тест вывода с консоли
+        {
+            ConsoleRedirector cr = new ConsoleRedirector();
+            Assert.IsFalse(cr.ToString().Contains("Животное: Крокодил; Возраст: 2; Ареал обитания: Куба"));
+            Animal animal = new Animal("Крокодил", 2, "Куба");
+            animal.Print();
+            Assert.IsTrue(cr.ToString().Contains("Животное: Крокодил; Возраст: 2; Ареал обитания: Куба"));
+        }
+
+        [TestMethod]
         public void TestAnimalNotEquals1()
         {
             Animal animal1 = new Animal("Крокодил", 1, "Айдохья");

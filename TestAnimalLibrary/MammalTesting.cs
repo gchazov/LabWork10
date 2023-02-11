@@ -74,6 +74,16 @@ namespace TestAnimalLibrary
         }
 
         [TestMethod]
+        public void TestMammalPrint() //тест вывода с консоли
+        {
+            ConsoleRedirector cr = new ConsoleRedirector();
+            Assert.IsFalse(cr.ToString().Contains("Млекопитающее: Слон; Возраст: 20; Ареал обитания: Африка; Покрыто шерстью: False"));
+            Mammal animal = new Mammal("Слон", 20, "Африка", false);
+            animal.Print();
+            Assert.IsTrue(cr.ToString().Contains("Млекопитающее: Слон; Возраст: 20; Ареал обитания: Африка; Покрыто шерстью: False"));
+        }
+
+        [TestMethod]
         public void TestMammalNotEquals1()
         {
             Mammal actual1 = new Mammal("Бульдог", 2, "США", false);

@@ -78,6 +78,16 @@ namespace TestAnimalLibrary
         }
 
         [TestMethod]
+        public void TestMammalPrint() //тест вывода с консоли
+        {
+            ConsoleRedirector cr = new ConsoleRedirector();
+            Assert.IsFalse(cr.ToString().Contains("Парнокопытное: Барашек; Возраст: 20; Ареал обитания: Россия; Покрыто шерстью: False; Вид рогов: нет"));
+            Artiodactyl animal = new Artiodactyl("Барашек", 20, "Россия", false, "нет");
+            animal.Print();
+            Assert.IsTrue(cr.ToString().Contains("Парнокопытное: Барашек; Возраст: 20; Ареал обитания: Россия; Покрыто шерстью: False; Вид рогов: нет"));
+        }
+
+        [TestMethod]
         public void TestMammalNotEquals1()
         {
             Artiodactyl actual1 = new Artiodactyl("Овца", 2, "США", false, "no");

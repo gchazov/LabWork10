@@ -74,6 +74,16 @@ namespace TestAnimalLibrary
         }
 
         [TestMethod]
+        public void TestBirdPrint() //тест вывода с консоли
+        {
+            ConsoleRedirector cr = new ConsoleRedirector();
+            Assert.IsFalse(cr.ToString().Contains("Птица: Страус; Возраст: 2; Ареал обитания: Куба; Умение летать: False"));
+            Bird animal = new Bird("Страус", 2, "Куба", false);
+            animal.Print();
+            Assert.IsTrue(cr.ToString().Contains("Птица: Страус; Возраст: 2; Ареал обитания: Куба; Умение летать: False"));
+        }
+
+        [TestMethod]
         public void TestBirdNotEquals1()
         {
             Bird bird1 = new Bird("Свирестель", 2, "Антананариву", false);
