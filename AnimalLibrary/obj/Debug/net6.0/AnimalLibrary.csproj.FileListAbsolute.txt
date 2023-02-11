@@ -10,3 +10,15 @@ C:\Users\cheyz\Desktop\Домашка\Программирование\Лабо�
 C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\AnimalLibrary\obj\Debug\net6.0\refint\AnimalLibrary.dll
 C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\AnimalLibrary\obj\Debug\net6.0\AnimalLibrary.pdb
 C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\AnimalLibrary\obj\Debug\net6.0\ref\AnimalLibrary.dll
+C:\Users\cheyz\LabWork10\AnimalLibrary\bin\Debug\net6.0\AnimalLibrary.deps.json
+C:\Users\cheyz\LabWork10\AnimalLibrary\bin\Debug\net6.0\AnimalLibrary.dll
+C:\Users\cheyz\LabWork10\AnimalLibrary\bin\Debug\net6.0\AnimalLibrary.pdb
+C:\Users\cheyz\LabWork10\AnimalLibrary\obj\Debug\net6.0\AnimalLibrary.csproj.AssemblyReference.cache
+C:\Users\cheyz\LabWork10\AnimalLibrary\obj\Debug\net6.0\AnimalLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cheyz\LabWork10\AnimalLibrary\obj\Debug\net6.0\AnimalLibrary.AssemblyInfoInputs.cache
+C:\Users\cheyz\LabWork10\AnimalLibrary\obj\Debug\net6.0\AnimalLibrary.AssemblyInfo.cs
+C:\Users\cheyz\LabWork10\AnimalLibrary\obj\Debug\net6.0\AnimalLibrary.csproj.CoreCompileInputs.cache
+C:\Users\cheyz\LabWork10\AnimalLibrary\obj\Debug\net6.0\AnimalLibrary.dll
+C:\Users\cheyz\LabWork10\AnimalLibrary\obj\Debug\net6.0\refint\AnimalLibrary.dll
+C:\Users\cheyz\LabWork10\AnimalLibrary\obj\Debug\net6.0\AnimalLibrary.pdb
+C:\Users\cheyz\LabWork10\AnimalLibrary\obj\Debug\net6.0\ref\AnimalLibrary.dll

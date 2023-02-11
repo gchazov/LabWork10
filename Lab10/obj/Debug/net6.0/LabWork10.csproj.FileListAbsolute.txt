@@ -16,3 +16,21 @@ C:\Users\cheyz\Desktop\Домашка\Программирование\Лабо�
 C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\Lab10\obj\Debug\net6.0\LabWork10.pdb
 C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\Lab10\obj\Debug\net6.0\LabWork10.genruntimeconfig.cache
 C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\Lab10\obj\Debug\net6.0\ref\LabWork10.dll
+C:\Users\cheyz\LabWork10\Lab10\bin\Debug\net6.0\LabWork10.exe
+C:\Users\cheyz\LabWork10\Lab10\bin\Debug\net6.0\LabWork10.deps.json
+C:\Users\cheyz\LabWork10\Lab10\bin\Debug\net6.0\LabWork10.runtimeconfig.json
+C:\Users\cheyz\LabWork10\Lab10\bin\Debug\net6.0\LabWork10.dll
+C:\Users\cheyz\LabWork10\Lab10\bin\Debug\net6.0\LabWork10.pdb
+C:\Users\cheyz\LabWork10\Lab10\bin\Debug\net6.0\AnimalLibrary.dll
+C:\Users\cheyz\LabWork10\Lab10\bin\Debug\net6.0\AnimalLibrary.pdb
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\LabWork10.csproj.AssemblyReference.cache
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\LabWork10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\LabWork10.AssemblyInfoInputs.cache
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\LabWork10.AssemblyInfo.cs
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\LabWork10.csproj.CoreCompileInputs.cache
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\LabWork10.csproj.CopyComplete
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\LabWork10.dll
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\refint\LabWork10.dll
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\LabWork10.pdb
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\LabWork10.genruntimeconfig.cache
+C:\Users\cheyz\LabWork10\Lab10\obj\Debug\net6.0\ref\LabWork10.dll

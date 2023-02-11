@@ -68,6 +68,10 @@ namespace AnimalLibrary
                 return false;
         }
 
+        public new void Print()
+        {
+            Console.WriteLine($"Млекопитающее: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}");
+        }
         public override void Show()
         {
             Console.WriteLine($"Млекопитающее: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}");

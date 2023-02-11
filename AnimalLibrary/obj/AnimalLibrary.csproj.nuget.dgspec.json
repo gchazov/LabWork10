@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\AnimalLibrary\\AnimalLibrary.csproj": {}
+    "C:\\Users\\cheyz\\LabWork10\\AnimalLibrary\\AnimalLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\AnimalLibrary\\AnimalLibrary.csproj": {
+    "C:\\Users\\cheyz\\LabWork10\\AnimalLibrary\\AnimalLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\AnimalLibrary\\AnimalLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\cheyz\\LabWork10\\AnimalLibrary\\AnimalLibrary.csproj",
         "projectName": "AnimalLibrary",
-        "projectPath": "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\AnimalLibrary\\AnimalLibrary.csproj",
+        "projectPath": "C:\\Users\\cheyz\\LabWork10\\AnimalLibrary\\AnimalLibrary.csproj",
         "packagesPath": "C:\\Users\\cheyz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\AnimalLibrary\\obj\\",
+        "outputPath": "C:\\Users\\cheyz\\LabWork10\\AnimalLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cheyz\\AppData\\Roaming\\NuGet\\NuGet.Config",

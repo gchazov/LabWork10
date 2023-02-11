@@ -1088,11 +1088,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\TestAnimalLibrary\\TestAnimalLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\TestAnimalLibrary.csproj",
       "projectName": "TestAnimalLibrary",
-      "projectPath": "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\TestAnimalLibrary\\TestAnimalLibrary.csproj",
+      "projectPath": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\TestAnimalLibrary.csproj",
       "packagesPath": "C:\\Users\\cheyz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\TestAnimalLibrary\\obj\\",
+      "outputPath": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cheyz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1109,8 +1109,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\AnimalLibrary\\AnimalLibrary.csproj": {
-              "projectPath": "C:\\Users\\cheyz\\Desktop\\Домашка\\Программирование\\Лабораторная работа №10\\AnimalLibrary\\AnimalLibrary.csproj"
+            "C:\\Users\\cheyz\\LabWork10\\AnimalLibrary\\AnimalLibrary.csproj": {
+              "projectPath": "C:\\Users\\cheyz\\LabWork10\\AnimalLibrary\\AnimalLibrary.csproj"
             }
           }
         }

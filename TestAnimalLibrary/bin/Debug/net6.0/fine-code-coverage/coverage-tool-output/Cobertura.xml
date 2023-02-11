@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.947368421052632" branch-rate="0.790322580645161" lines-covered="360" lines-valid="380" branches-covered="49" branches-valid="62" complexity="123" version="0" timestamp="1676070361">
+<coverage line-rate="0.76271186440678" branch-rate="0.521276595744681" lines-covered="360" lines-valid="472" branches-covered="49" branches-valid="94" complexity="157" version="0" timestamp="1676130996">
   <sources>
     <source>C:\Users\cheyz\</source>
   </sources>
   <packages>
-    <package name="AnimalLibrary" line-rate="0.885542168674699" branch-rate="1" complexity="68">
+    <package name="AnimalLibrary" line-rate="0.569767441860465" branch-rate="0.529411764705882" complexity="102">
       <classes>
-        <class name="AnimalLibrary.Animal" filename="C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\AnimalLibrary\Animal.cs" line-rate="0.903846153846154" branch-rate="1" complexity="19">
+        <class name="AnimalLibrary.Animal" filename="C:\Users\cheyz\LabWork10\AnimalLibrary\Animal.cs" line-rate="0.903846153846154" branch-rate="1" complexity="19">
           <methods>
             <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -161,7 +161,7 @@
             <line number="111" hits="6" branch="false" />
           </lines>
         </class>
-        <class name="AnimalLibrary.Artiodactyl" filename="C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\AnimalLibrary\Artiodactyl.cs" line-rate="0.891891891891892" branch-rate="1" complexity="17">
+        <class name="AnimalLibrary.Artiodactyl" filename="C:\Users\cheyz\LabWork10\AnimalLibrary\Artiodactyl.cs" line-rate="0.891891891891892" branch-rate="1" complexity="17">
           <methods>
             <method name="get_HornStyle" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -275,7 +275,7 @@
             <line number="78" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="AnimalLibrary.Bird" filename="C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\AnimalLibrary\Bird.cs" line-rate="0.878787878787879" branch-rate="1" complexity="15">
+        <class name="AnimalLibrary.Bird" filename="C:\Users\cheyz\LabWork10\AnimalLibrary\Bird.cs" line-rate="0.878787878787879" branch-rate="1" complexity="15">
           <methods>
             <method name="get_FlyAbility" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -381,7 +381,7 @@
             <line number="75" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="AnimalLibrary.ConsoleRedirector" filename="C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\AnimalLibrary\ConsoleRedirector.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="AnimalLibrary.ConsoleRedirector" filename="C:\Users\cheyz\LabWork10\AnimalLibrary\ConsoleRedirector.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="ToString" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -413,7 +413,221 @@
             <line number="23" hits="8" branch="false" />
           </lines>
         </class>
-        <class name="AnimalLibrary.Mammal" filename="C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\AnimalLibrary\Mammal.cs" line-rate="0.828571428571429" branch-rate="1" complexity="15">
+        <class name="AnimalLibrary.Dialog" filename="C:\Users\cheyz\LabWork10\AnimalLibrary\Dialog.cs" line-rate="0" branch-rate="0" complexity="34">
+          <methods>
+            <method name="EnterNumber" signature="(...)" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="17" hits="0" branch="false" />
+                <line number="18" hits="0" branch="false" />
+                <line number="19" hits="0" branch="false" />
+                <line number="21" hits="0" branch="false" />
+                <line number="22" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+                <line number="25" hits="0" branch="false" />
+                <line number="26" hits="0" branch="true" condition-coverage="0% (0/4)" />
+                <line number="27" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
+                <line number="29" hits="0" branch="false" />
+                <line number="31" hits="0" branch="false" />
+                <line number="32" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
+                <line number="36" hits="0" branch="false" />
+                <line number="37" hits="0" branch="false" />
+                <line number="38" hits="0" branch="false" />
+                <line number="39" hits="0" branch="false" />
+                <line number="41" hits="0" branch="false" />
+                <line number="42" hits="0" branch="false" />
+                <line number="43" hits="0" branch="false" />
+                <line number="44" hits="0" branch="false" />
+                <line number="45" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="46" hits="0" branch="false" />
+                <line number="47" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="EnterString" signature="(...)" line-rate="0" branch-rate="0" complexity="12">
+              <lines>
+                <line number="50" hits="0" branch="false" />
+                <line number="51" hits="0" branch="false" />
+                <line number="52" hits="0" branch="false" />
+                <line number="53" hits="0" branch="false" />
+                <line number="55" hits="0" branch="false" />
+                <line number="56" hits="0" branch="false" />
+                <line number="57" hits="0" branch="false" />
+                <line number="58" hits="0" branch="false" />
+                <line number="59" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="60" hits="0" branch="false" />
+                <line number="61" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="62" hits="0" branch="false" />
+                <line number="63" hits="0" branch="false" />
+                <line number="64" hits="0" branch="false" />
+                <line number="66" hits="0" branch="false" />
+                <line number="67" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="68" hits="0" branch="false" />
+                <line number="69" hits="0" branch="false" />
+                <line number="70" hits="0" branch="false" />
+                <line number="72" hits="0" branch="true" condition-coverage="0% (0/4)" />
+                <line number="73" hits="0" branch="false" />
+                <line number="74" hits="0" branch="false" />
+                <line number="75" hits="0" branch="false" />
+                <line number="77" hits="0" branch="false" />
+                <line number="78" hits="0" branch="false" />
+                <line number="79" hits="0" branch="false" />
+                <line number="80" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="81" hits="0" branch="false" />
+                <line number="82" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="EnterBool" signature="(...)" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="85" hits="0" branch="false" />
+                <line number="86" hits="0" branch="false" />
+                <line number="87" hits="0" branch="false" />
+                <line number="89" hits="0" branch="false" />
+                <line number="90" hits="0" branch="false" />
+                <line number="91" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="92" hits="0" branch="false" />
+                <line number="93" hits="0" branch="false" />
+                <line number="94" hits="0" branch="false" />
+                <line number="95" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="96" hits="0" branch="false" />
+                <line number="97" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="PrintHeader" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="100" hits="0" branch="false" />
+                <line number="101" hits="0" branch="false" />
+                <line number="102" hits="0" branch="false" />
+                <line number="103" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="ColorText" signature="(...)" line-rate="0" branch-rate="0" complexity="10">
+              <lines>
+                <line number="106" hits="0" branch="false" />
+                <line number="107" hits="0" branch="false" />
+                <line number="108" hits="0" branch="true" condition-coverage="0% (0/10)" />
+                <line number="111" hits="0" branch="false" />
+                <line number="112" hits="0" branch="false" />
+                <line number="114" hits="0" branch="false" />
+                <line number="115" hits="0" branch="false" />
+                <line number="117" hits="0" branch="false" />
+                <line number="118" hits="0" branch="false" />
+                <line number="120" hits="0" branch="false" />
+                <line number="121" hits="0" branch="false" />
+                <line number="123" hits="0" branch="false" />
+                <line number="124" hits="0" branch="false" />
+                <line number="126" hits="0" branch="false" />
+                <line number="127" hits="0" branch="false" />
+                <line number="128" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="BackMessage" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="131" hits="0" branch="false" />
+                <line number="132" hits="0" branch="false" />
+                <line number="133" hits="0" branch="false" />
+                <line number="134" hits="0" branch="false" />
+                <line number="135" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="0" branch="false" />
+            <line number="18" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+            <line number="25" hits="0" branch="false" />
+            <line number="26" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="27" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="29" hits="0" branch="false" />
+            <line number="31" hits="0" branch="false" />
+            <line number="32" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="36" hits="0" branch="false" />
+            <line number="37" hits="0" branch="false" />
+            <line number="38" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
+            <line number="41" hits="0" branch="false" />
+            <line number="42" hits="0" branch="false" />
+            <line number="43" hits="0" branch="false" />
+            <line number="44" hits="0" branch="false" />
+            <line number="45" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="46" hits="0" branch="false" />
+            <line number="47" hits="0" branch="false" />
+            <line number="50" hits="0" branch="false" />
+            <line number="51" hits="0" branch="false" />
+            <line number="52" hits="0" branch="false" />
+            <line number="53" hits="0" branch="false" />
+            <line number="55" hits="0" branch="false" />
+            <line number="56" hits="0" branch="false" />
+            <line number="57" hits="0" branch="false" />
+            <line number="58" hits="0" branch="false" />
+            <line number="59" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="60" hits="0" branch="false" />
+            <line number="61" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="62" hits="0" branch="false" />
+            <line number="63" hits="0" branch="false" />
+            <line number="64" hits="0" branch="false" />
+            <line number="66" hits="0" branch="false" />
+            <line number="67" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="68" hits="0" branch="false" />
+            <line number="69" hits="0" branch="false" />
+            <line number="70" hits="0" branch="false" />
+            <line number="72" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="73" hits="0" branch="false" />
+            <line number="74" hits="0" branch="false" />
+            <line number="75" hits="0" branch="false" />
+            <line number="77" hits="0" branch="false" />
+            <line number="78" hits="0" branch="false" />
+            <line number="79" hits="0" branch="false" />
+            <line number="80" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="81" hits="0" branch="false" />
+            <line number="82" hits="0" branch="false" />
+            <line number="85" hits="0" branch="false" />
+            <line number="86" hits="0" branch="false" />
+            <line number="87" hits="0" branch="false" />
+            <line number="89" hits="0" branch="false" />
+            <line number="90" hits="0" branch="false" />
+            <line number="91" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="92" hits="0" branch="false" />
+            <line number="93" hits="0" branch="false" />
+            <line number="94" hits="0" branch="false" />
+            <line number="95" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="96" hits="0" branch="false" />
+            <line number="97" hits="0" branch="false" />
+            <line number="100" hits="0" branch="false" />
+            <line number="101" hits="0" branch="false" />
+            <line number="102" hits="0" branch="false" />
+            <line number="103" hits="0" branch="false" />
+            <line number="106" hits="0" branch="false" />
+            <line number="107" hits="0" branch="false" />
+            <line number="108" hits="0" branch="true" condition-coverage="0% (0/10)" />
+            <line number="111" hits="0" branch="false" />
+            <line number="112" hits="0" branch="false" />
+            <line number="114" hits="0" branch="false" />
+            <line number="115" hits="0" branch="false" />
+            <line number="117" hits="0" branch="false" />
+            <line number="118" hits="0" branch="false" />
+            <line number="120" hits="0" branch="false" />
+            <line number="121" hits="0" branch="false" />
+            <line number="123" hits="0" branch="false" />
+            <line number="124" hits="0" branch="false" />
+            <line number="126" hits="0" branch="false" />
+            <line number="127" hits="0" branch="false" />
+            <line number="128" hits="0" branch="false" />
+            <line number="131" hits="0" branch="false" />
+            <line number="132" hits="0" branch="false" />
+            <line number="133" hits="0" branch="false" />
+            <line number="134" hits="0" branch="false" />
+            <line number="135" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="AnimalLibrary.Mammal" filename="C:\Users\cheyz\LabWork10\AnimalLibrary\Mammal.cs" line-rate="0.828571428571429" branch-rate="1" complexity="15">
           <methods>
             <method name="get_IsWoolen" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -539,7 +753,7 @@
             <line number="4" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="TestAnimalLibrary.AnimalTesting" filename="C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\TestAnimalLibrary\AnimalTesting.cs" line-rate="1" branch-rate="0.5" complexity="13">
+        <class name="TestAnimalLibrary.AnimalTesting" filename="C:\Users\cheyz\LabWork10\TestAnimalLibrary\AnimalTesting.cs" line-rate="1" branch-rate="0.5" complexity="13">
           <methods>
             <method name="TestAnimalEmptyCtor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -679,7 +893,7 @@
             <line number="83" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="TestAnimalLibrary.ArtiodactylTesting" filename="C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\TestAnimalLibrary\ArtiodactylTesting.cs" line-rate="1" branch-rate="0.5" complexity="15">
+        <class name="TestAnimalLibrary.ArtiodactylTesting" filename="C:\Users\cheyz\LabWork10\TestAnimalLibrary\ArtiodactylTesting.cs" line-rate="1" branch-rate="0.5" complexity="15">
           <methods>
             <method name="TestMammalEmptyCtor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -829,7 +1043,7 @@
             <line number="94" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="TestAnimalLibrary.BirdTesting" filename="C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\TestAnimalLibrary\BirdTesting.cs" line-rate="1" branch-rate="0.5" complexity="13">
+        <class name="TestAnimalLibrary.BirdTesting" filename="C:\Users\cheyz\LabWork10\TestAnimalLibrary\BirdTesting.cs" line-rate="1" branch-rate="0.5" complexity="13">
           <methods>
             <method name="TestBirdEmptyCtor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -973,7 +1187,7 @@
             <line number="90" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="TestAnimalLibrary.MammalTesting" filename="C:\Users\cheyz\Desktop\Домашка\Программирование\Лабораторная работа №10\TestAnimalLibrary\MammalTesting.cs" line-rate="1" branch-rate="0.5" complexity="13">
+        <class name="TestAnimalLibrary.MammalTesting" filename="C:\Users\cheyz\LabWork10\TestAnimalLibrary\MammalTesting.cs" line-rate="1" branch-rate="0.5" complexity="13">
           <methods>
             <method name="TestMammalEmptyCtor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>

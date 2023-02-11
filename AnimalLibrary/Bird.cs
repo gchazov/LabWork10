@@ -69,6 +69,11 @@ namespace AnimalLibrary
                 return false;
         }
 
+        public new void Print()
+        {
+            Console.WriteLine($"Птица: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Умение летать: {FlyAbility}");
+        }
+
         public override void Show()
         {
             Console.WriteLine($"Птица: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Умение летать: {FlyAbility}");

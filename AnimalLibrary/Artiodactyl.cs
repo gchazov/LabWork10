@@ -70,6 +70,12 @@ namespace AnimalLibrary
             else
                 return false;
         }
+        
+        public new void Print()
+        {
+            Console.WriteLine($"Парнокопытное: {Name}; Возраст: {Age}; " +
+                $"Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}; Вид рогов: {HornStyle}");
+        }
 
         public override void Show()
         {

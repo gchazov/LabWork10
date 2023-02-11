@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 namespace AnimalLibrary
 {
     //класс для работы с пользовательским интерфейсом и вводом-выводом
-    [ExcludeFromCodeCoverage] //Единственное применение этого атрибута!
     //класс создан только для упрощения ввода-вывода, не больше
     public class Dialog
     {
