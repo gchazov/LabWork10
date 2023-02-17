@@ -2,13 +2,13 @@
 using System.ComponentModel.DataAnnotations;
 using AnimalLibrary;
 using System.Globalization;
+
 namespace LabWork10
 {
+    //лабораторная работа 10, вариант 13
     public class Program
     {
-        /// <summary>
-        /// Главное меню с выбором функционала программы
-        /// </summary>
+        //главное меню с вариантами работы программы
         public static void MainMenu()
         {
             Dialog.PrintHeader("Лабораторная работа №10 (части 1 и 2)");
@@ -18,10 +18,7 @@ namespace LabWork10
                 "4. Завершить работу программы\n");
         }
 
-        /// <summary>
-        /// Создание массива с помощью ДСЧ (по заданию)
-        /// </summary>
-        /// <param name="animals">массив с обитателями зоопарка</param>
+        //создания массива с помощью ДСЧ (по заданию)
         public static void CreateArray(ref Animal[] animals)
         {
             
@@ -65,10 +62,7 @@ namespace LabWork10
             return;
         }
 
-        /// <summary>
-        /// Вывод содержимого массива на экран
-        /// </summary>
-        /// <param name="animals">Здесь и далее - массив объектов типа Animal</param>
+        //вывод содержимого массива на экран
         public static void ShowArray(Animal[] animals)
         {
             Dialog.PrintHeader("Содержимое массива");
@@ -92,10 +86,7 @@ namespace LabWork10
             return;
         }
 
-        /// <summary>
-        /// Меню запросов
-        /// </summary>
-        /// <param name="animals"></param>
+        //вывод меню запросов
         public static void RequestMenu(Animal[] animals)
         {
             Dialog.PrintHeader("Выполнение запроса");
@@ -138,10 +129,7 @@ namespace LabWork10
             } while (true);
         }
 
-        /// <summary>
-        /// Запрос на количество птиц
-        /// </summary>
-        /// <param name="animals"></param>
+        //выполнение запроса на кол-во птиц
         public static void ShowBirdCount(Animal[] animals)
         {
             Dialog.PrintHeader("Количество птиц в зоопарке");
@@ -158,10 +146,7 @@ namespace LabWork10
             return;
         }
         
-        /// <summary>
-        /// Запрос на старейшее животное
-        /// </summary>
-        /// <param name="animals"></param>
+        //выполнение запроса на старейшее живнотое
         public static void ShowOldestAnimal(Animal[] animals)
         {
             Dialog.PrintHeader("Самое старшее животное");
@@ -172,10 +157,7 @@ namespace LabWork10
             return;
         }
 
-        /// <summary>
-        /// Запрос на рога самого молодого парнокопытного
-        /// </summary>
-        /// <param name="animals"></param>
+        //выполнение запроса на рога самого молодого парнокопытного
         public static void ShowYoungestHorn(Animal[] animals)
         {
             Dialog.PrintHeader("Рога самого молодого парнокопытного");
@@ -187,10 +169,7 @@ namespace LabWork10
             return;
         }
 
-        /// <summary>
-        /// Запрос на животных из одной местности
-        /// </summary>
-        /// <param name="animals"></param>
+        //выполнение запроса на животных из одной местности
         public static void ShowInhabitedArea(Animal[] animals)
         {
             Dialog.PrintHeader("Животные из одной местности");
@@ -237,10 +216,7 @@ namespace LabWork10
 
         }
 
-        /// <summary>
-        /// Вполнение работы всех функций
-        /// </summary>
-        /// <param name="animals"></param>
+        //выполнение функций и вывод менюшек
         public static void Run(Animal[] animals)
         {
             bool runProgram = true;

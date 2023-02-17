@@ -226,3 +226,8 @@ C:\Users\cheyz\LabWork10\TestAnimalLibrary\obj\Debug\net6.0\refint\TestAnimalLib
 C:\Users\cheyz\LabWork10\TestAnimalLibrary\obj\Debug\net6.0\TestAnimalLibrary.pdb
 C:\Users\cheyz\LabWork10\TestAnimalLibrary\obj\Debug\net6.0\TestAnimalLibrary.genruntimeconfig.cache
 C:\Users\cheyz\LabWork10\TestAnimalLibrary\obj\Debug\net6.0\ref\TestAnimalLibrary.dll
+C:\Users\cheyz\LabWork10\TestAnimalLibrary\bin\Debug\net6.0\LabWork10.deps.json
+C:\Users\cheyz\LabWork10\TestAnimalLibrary\bin\Debug\net6.0\LabWork10.runtimeconfig.json
+C:\Users\cheyz\LabWork10\TestAnimalLibrary\bin\Debug\net6.0\LabWork10.exe
+C:\Users\cheyz\LabWork10\TestAnimalLibrary\bin\Debug\net6.0\LabWork10.dll
+C:\Users\cheyz\LabWork10\TestAnimalLibrary\bin\Debug\net6.0\LabWork10.pdb

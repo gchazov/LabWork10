@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AnimalLibrary\AnimalLibrary.csproj" />
+    <ProjectReference Include="..\Lab10\LabWork10.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,7 +8,7 @@ using AnimalLibrary;
 
 namespace LabWork10
 {
-    internal class AnimalQuery
+    public class AnimalQuery
     {
         //запрос на количество птиц
         public static int BirdCount(Animal[] animals)
@@ -24,7 +24,7 @@ namespace LabWork10
             return birdCounter;
         }
 
-        //запрос на старейшее животное
+        //запрос на старейшее животное (индекс в массиве)
         public static int OldestAnimal(Animal[] animals)
         {
             int oldestIndex = -1;
@@ -42,7 +42,7 @@ namespace LabWork10
             return oldestIndex;
         }
 
-        //запрос на рога самого молодого парнокопытного
+        //запрос на рога самого молодого парнокопытного (индекс в массиве)
         public static int YoungestHorn(Animal[] animals)
         {
             int youngestAge = 21;
@@ -67,13 +67,21 @@ namespace LabWork10
         public static Animal[] InhabitedArea(Animal[] animals, string choice)
         {
             int animalCount = 0;
-            Animal[] animalsHabitat = new Animal[animals.Length];
             for (int i = 0; i < animals.Length; i++)
             {
                 if (animals[i].Habitat.ToLower() == choice.ToLower())
                 {
-                    animalsHabitat[i] = animals[i];
                     animalCount++;
+                }
+                
+            }
+            Animal[] animalsHabitat = new Animal[animalCount];
+            for (int i = 0, j = 0; i < animals.Length; i++)
+            {
+                if (animals[i].Habitat.ToLower() == choice.ToLower())
+                {
+                    animalsHabitat[j] = animals[i];
+                    j++;
                 }
             }
             return animalsHabitat;

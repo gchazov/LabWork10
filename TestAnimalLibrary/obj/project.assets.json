@@ -403,6 +403,19 @@
         "runtime": {
           "bin/placeholder/AnimalLibrary.dll": {}
         }
+      },
+      "LabWork10/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AnimalLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LabWork10.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LabWork10.dll": {}
+        }
       }
     }
   },
@@ -1071,11 +1084,17 @@
       "type": "project",
       "path": "../AnimalLibrary/AnimalLibrary.csproj",
       "msbuildProject": "../AnimalLibrary/AnimalLibrary.csproj"
+    },
+    "LabWork10/1.0.0": {
+      "type": "project",
+      "path": "../Lab10/LabWork10.csproj",
+      "msbuildProject": "../Lab10/LabWork10.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "AnimalLibrary >= 1.0.0",
+      "LabWork10 >= 1.0.0",
       "MSTest.TestAdapter >= 3.0.2",
       "MSTest.TestFramework >= 3.0.2",
       "Microsoft.NET.Test.Sdk >= 17.4.1",
@@ -1111,6 +1130,9 @@
           "projectReferences": {
             "C:\\Users\\cheyz\\LabWork10\\AnimalLibrary\\AnimalLibrary.csproj": {
               "projectPath": "C:\\Users\\cheyz\\LabWork10\\AnimalLibrary\\AnimalLibrary.csproj"
+            },
+            "C:\\Users\\cheyz\\LabWork10\\Lab10\\LabWork10.csproj": {
+              "projectPath": "C:\\Users\\cheyz\\LabWork10\\Lab10\\LabWork10.csproj"
             }
           }
         }

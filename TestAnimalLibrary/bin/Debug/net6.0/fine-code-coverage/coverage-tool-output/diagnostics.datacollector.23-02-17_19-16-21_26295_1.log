@@ -1,3 +1,0 @@
-TpTrace Verbose: 0 : 14144, 1, 2023/02/17, 19:16:21.401, 2479856535969, datacollector.dll, Version: 17.3.0-release-20220708-01
-TpTrace Information: 0 : 14144, 1, 2023/02/17, 19:16:21.403, 2479856558894, datacollector.dll, DataCollectorMain.Run: Starting data collector run with args: --port,59987,--parentprocessid,708,--diag,C:\Users\cheyz\LabWork10\TestAnimalLibrary\bin\Debug\net6.0\fine-code-coverage\coverage-tool-output\diagnostics.datacollector.23-02-17_19-16-21_26295_1.log,--tracelevel,4
-TpTrace Information: 0 : 14144, 1, 2023/02/17, 19:16:21.403, 2479856560059, datacollector.dll, DataCollector: Monitoring parent process with id: '708'
