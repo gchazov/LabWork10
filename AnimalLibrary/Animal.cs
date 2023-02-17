@@ -1,6 +1,6 @@
 ﻿namespace AnimalLibrary
 {
-    public class Animal
+    public class Animal: IInit, IComparable
     {
         /*описание полей, вспомогательных массивов
          такое описание есть в каждом наследуемом классе
@@ -116,6 +116,13 @@
             }
             else
                 return false;
+        }
+
+        public int CompareTo(object? obj)
+        {
+            if (!(obj is Animal)) return -1;
+            Animal animal = (Animal)obj;
+            return Name.CompareTo(animal.Name);
         }
     }
 }

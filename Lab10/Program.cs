@@ -11,11 +11,12 @@ namespace LabWork10
         //главное меню с вариантами работы программы
         public static void MainMenu()
         {
-            Dialog.PrintHeader("Лабораторная работа №10 (части 1 и 2)");
+            Dialog.PrintHeader("Лабораторная работа №10");
             Console.WriteLine("1. Создать массив случайных объектов (животных)\n" +
                 "2. Просмотреть элементы массива объектов\n" +
                 "3. Выполнить запрос\n" +
-                "4. Завершить работу программы\n");
+                "4. Выполнить сортировку массива\n" +
+                "5. Завершить работу программы");
         }
 
         //создания массива с помощью ДСЧ (по заданию)
@@ -57,7 +58,7 @@ namespace LabWork10
                 }
             }
             Array.Copy(array, animals, array.Length);
-            Dialog.ColorText($"Зоопарк из {animals.Length} животного(-ых) успешно открыт", "green");
+            Dialog.ColorText($"\nЗоопарк из {animals.Length} животного(-ых) успешно открыт", "green");
             Dialog.BackMessage();
             return;
         }
@@ -133,7 +134,7 @@ namespace LabWork10
         public static void ShowBirdCount(Animal[] animals)
         {
             Dialog.PrintHeader("Количество птиц в зоопарке");
-            int birdCounter = AnimalQuery.BirdCount(animals);
+            int birdCounter = AnimalQueryAndSort.BirdCount(animals);
             Console.WriteLine($"Количество птиц, проживающих в зоопарке на данный момент - {birdCounter}, среди них:\n");
             foreach (Animal animal in animals)
             {
@@ -150,7 +151,7 @@ namespace LabWork10
         public static void ShowOldestAnimal(Animal[] animals)
         {
             Dialog.PrintHeader("Самое старшее животное");
-            int oldestIndex = AnimalQuery.OldestAnimal(animals);
+            int oldestIndex = AnimalQueryAndSort.OldestAnimal(animals);
             Console.WriteLine($"Самое старое животное - {animals[oldestIndex].Name}, " +
                 $"его среда обитания - {animals[oldestIndex].Habitat}, а возраст равен {animals[oldestIndex].Age}");
             Dialog.BackMessage();
@@ -161,7 +162,7 @@ namespace LabWork10
         public static void ShowYoungestHorn(Animal[] animals)
         {
             Dialog.PrintHeader("Рога самого молодого парнокопытного");
-            int youngestIndex = AnimalQuery.YoungestHorn(animals);
+            int youngestIndex = AnimalQueryAndSort.YoungestHorn(animals);
             Artiodactyl? youngestArt = animals[youngestIndex] as Artiodactyl;
             Console.WriteLine($"Самое молодое парнокопытное в зоопарке - {animals[youngestIndex].Name}, " +
                 $"его возраст - {animals[youngestIndex].Age}, а рога {youngestArt?.HornStyle}");
@@ -191,7 +192,7 @@ namespace LabWork10
                 }
             } while (!isCorrect);
 
-            Animal[] inhabited = AnimalQuery.InhabitedArea(animals, choice);
+            Animal[] inhabited = AnimalQueryAndSort.InhabitedArea(animals, choice);
 
             switch (inhabited.Length)
             {
@@ -216,6 +217,39 @@ namespace LabWork10
 
         }
 
+        //меню сортировок массива
+        public static void SortMenu(ref Animal[] animals)
+        {
+            Dialog.PrintHeader("Сортировка массива");
+            if (animals.Length == 0)
+            {
+                Dialog.ColorText("Для пустого зоопарка операции сортировки недоступны!");
+                Dialog.BackMessage();
+                return;
+            }
+            Console.WriteLine("1. Сортировать по названиям животных\n" +
+                "2. Сортировать по возрасту\n" +
+                "3. Вернуться назад\n");
+            int choice = Dialog.EnterNumber("Выберите вариант сортировки:", 1, 3);
+            switch (choice)
+            {
+                case 1:
+                    Dialog.PrintHeader("Сортировка по названиям животных");
+                    animals = AnimalQueryAndSort.SortByName(animals); //сортировка по названиям
+                    Dialog.ColorText("Массив отсортирован по названиям животных", "green");
+                    Dialog.BackMessage();
+                    break;
+                case 2:
+                    Dialog.PrintHeader("Сортировка по возрасту животных");
+                    animals = AnimalQueryAndSort.SortByAge(animals); //сортировка по возрастам
+                    Dialog.ColorText("Массив отсортирован по возрастам животных", "green");
+                    Dialog.BackMessage();
+                    break;
+                case 3:
+                    return;
+            }
+        }
+
         //выполнение функций и вывод менюшек
         public static void Run(Animal[] animals)
         {
@@ -224,7 +258,7 @@ namespace LabWork10
             {
                 Console.Clear();
                 MainMenu();
-                int choice = Dialog.EnterNumber("Выберите один из пунктов меню:", 1, 4);
+                int choice = Dialog.EnterNumber("Выберите один из пунктов меню:", 1, 5);
                 switch (choice)
                 {
                     case 1:
@@ -237,6 +271,9 @@ namespace LabWork10
                         RequestMenu(animals);
                         break;
                     case 4:
+                        SortMenu(ref animals);
+                        break;
+                    case 5:
                         runProgram = false;
                         break;
 

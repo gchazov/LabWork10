@@ -8,7 +8,7 @@ using AnimalLibrary;
 
 namespace LabWork10
 {
-    public class AnimalQuery
+    public class AnimalQueryAndSort
     {
         //запрос на количество птиц
         public static int BirdCount(Animal[] animals)
@@ -85,6 +85,24 @@ namespace LabWork10
                 }
             }
             return animalsHabitat;
+        }
+
+        //сортировка массива по названиям животных
+        public static Animal[] SortByName(Animal[] animals)
+        {
+            Animal[] sortedAnimals = new Animal[animals.Length];
+            Array.Copy(animals, sortedAnimals, animals.Length);
+            Array.Sort(sortedAnimals);
+            return sortedAnimals;
+        }
+
+        //сортировка массива по возрастам животных
+        public static Animal[] SortByAge(Animal[] animals)
+        {
+            Animal[] sortedAnimals = new Animal[animals.Length];
+            Array.Copy(animals, sortedAnimals, animals.Length);
+            Array.Sort(sortedAnimals, new SortByAge());
+            return sortedAnimals;
         }
     }
 }
