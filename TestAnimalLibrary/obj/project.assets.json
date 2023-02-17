@@ -1107,9 +1107,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\TestAnimalLibrary.csproj",
-      "projectName": "TestAnimalLibrary",
-      "projectPath": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\TestAnimalLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\UnitTests.csproj",
+      "projectName": "UnitTests",
+      "projectPath": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\UnitTests.csproj",
       "packagesPath": "C:\\Users\\cheyz\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\obj\\",
       "projectStyle": "PackageReference",

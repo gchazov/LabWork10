@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+GxvcEuphglPaI1TD0Bw4gYQupMKSHk7FbQ9i5UwyvQqJtY7R1SWURwMMZw97n4yRdnt8WOMKIfP6SZvZCFNOw==",
+  "dgSpecHash": "qIm1J/QmRvpLBlcLWQY09qopTmi/uE4fa8DvdDHJaJef1qb26ghnXgjkNQv87nK6BvupcOiZ+8a/ywaYV2oMVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\TestAnimalLibrary.csproj",
+  "projectFilePath": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cheyz\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\cheyz\\.nuget\\packages\\microsoft.codecoverage\\17.4.1\\microsoft.codecoverage.17.4.1.nupkg.sha512",
