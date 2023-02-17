@@ -1,6 +1,5 @@
 ﻿namespace AnimalLibrary
 {
-    
     public class Animal
     {
         /*описание полей, вспомогательных массивов
@@ -92,22 +91,22 @@
         public virtual void Init(string name = "животного")
         {
 
-            this.name = Dialog.EnterString($"Введите название {name}:", false, true);
-            this.age = Dialog.EnterNumber($"Введите возраст {name}:", 1, 100);
-            this.habitat = Dialog.EnterString($"Введите возраст {name}:", true, true);
+            Name = Dialog.EnterString($"Введите название {name}:", false, true);
+            Age = Dialog.EnterNumber($"Введите возраст {name}:", 1, 100);
+            Habitat = Dialog.EnterString($"Введите возраст {name}:", true, true);
         }
 
         //генерация объекта с помощью ДСЧ
         public virtual void RandomInit()
         {
   
-            this.name = animalArray[random.Next(animalArray.Length)];
-            this.age = random.Next(1, 20);
-            this.habitat = habitatArray[random.Next(habitatArray.Length)];
+            Name = animalArray[random.Next(animalArray.Length)];
+            Age = random.Next(1, 20);
+            Habitat = habitatArray[random.Next(habitatArray.Length)];
         }
 
         //переопределение вирт. метода Equals
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is Animal animal)
             {

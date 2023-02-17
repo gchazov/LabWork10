@@ -108,7 +108,7 @@ namespace LabWork10
                 Dialog.BackMessage();
                 return;
             }
-            bool exit = false;
+
             do
             {
                 Dialog.PrintHeader("Выполнение запроса");
@@ -121,45 +121,31 @@ namespace LabWork10
                 switch (choice)
                 {
                     case 1:
-                        OldestAnimal(animals);
+                        ShowOldestAnimal(animals);
                         break;
                     case 2:
-                        BirdCount(animals);
+                        ShowBirdCount(animals);
                         break;
                     case 3:
-                        YoungestHorn(animals);
+                        ShowYoungestHorn(animals);
                         break;
                     case 4:
-                        InhabitedArea(animals);
+                        ShowInhabitedArea(animals);
                         break;
                     case 5:
-                        exit = true;
                         return;
                 }
-            } while (!exit);
+            } while (true);
         }
 
         /// <summary>
         /// Запрос на количество птиц
         /// </summary>
         /// <param name="animals"></param>
-        public static void BirdCount(Animal[] animals)
+        public static void ShowBirdCount(Animal[] animals)
         {
             Dialog.PrintHeader("Количество птиц в зоопарке");
-            int birdCounter = 0;
-            foreach(Animal animal in animals)
-            {
-                if (animal is Bird)
-                {
-                    birdCounter++;
-                }
-            }
-            if (birdCounter == 0)
-            {
-                Console.WriteLine("На сегодняшний день в зоопарке нет птиц");
-                Dialog.BackMessage();
-                return;
-            }
+            int birdCounter = AnimalQuery.BirdCount(animals);
             Console.WriteLine($"Количество птиц, проживающих в зоопарке на данный момент - {birdCounter}, среди них:\n");
             foreach (Animal animal in animals)
             {
@@ -176,21 +162,10 @@ namespace LabWork10
         /// Запрос на старейшее животное
         /// </summary>
         /// <param name="animals"></param>
-        public static void OldestAnimal(Animal[] animals)
+        public static void ShowOldestAnimal(Animal[] animals)
         {
             Dialog.PrintHeader("Самое старшее животное");
-            int oldestIndex = -1;
-            int maxAge = 0;
-            int counter = -1;
-            foreach(Animal animal in animals)
-            {
-                counter++;
-                if (animal.Age > maxAge)
-                {
-                    maxAge = animal.Age;
-                    oldestIndex = counter;
-                }
-            }
+            int oldestIndex = AnimalQuery.OldestAnimal(animals);
             Console.WriteLine($"Самое старое животное - {animals[oldestIndex].Name}, " +
                 $"его среда обитания - {animals[oldestIndex].Habitat}, а возраст равен {animals[oldestIndex].Age}");
             Dialog.BackMessage();
@@ -201,33 +176,13 @@ namespace LabWork10
         /// Запрос на рога самого молодого парнокопытного
         /// </summary>
         /// <param name="animals"></param>
-        public static void YoungestHorn(Animal[] animals)
+        public static void ShowYoungestHorn(Animal[] animals)
         {
             Dialog.PrintHeader("Рога самого молодого парнокопытного");
-            int youngestAge = 21;
-            int youngestIndex = -1;
-            int counter = -1;
-            Artiodactyl yngstArt = new Artiodactyl();
-            foreach (Animal animal in animals)
-            {
-                counter++;
-                Artiodactyl art = animal as Artiodactyl;
-                if (art != null && art.Age < youngestAge)
-                {
-                    youngestAge = art.Age;
-                    youngestIndex = counter;
-                    yngstArt = art;
-                }
-            }
-            if (youngestAge == 21)
-            {
-                Console.WriteLine("На сегодняшний день в зоопарке нет парнокопытных");
-                Dialog.BackMessage();
-                return;
-            }
-
-            Console.WriteLine($"Самое молодое парнокопытное в зоопарке - {yngstArt.Name}, " +
-                $"его возраст - {youngestAge}, а рога {yngstArt.HornStyle}");
+            int youngestIndex = AnimalQuery.YoungestHorn(animals);
+            Artiodactyl? youngestArt = animals[youngestIndex] as Artiodactyl;
+            Console.WriteLine($"Самое молодое парнокопытное в зоопарке - {animals[youngestIndex].Name}, " +
+                $"его возраст - {animals[youngestIndex].Age}, а рога {youngestArt?.HornStyle}");
             Dialog.BackMessage();
             return;
         }
@@ -236,13 +191,12 @@ namespace LabWork10
         /// Запрос на животных из одной местности
         /// </summary>
         /// <param name="animals"></param>
-        public static void InhabitedArea(Animal[] animals)
+        public static void ShowInhabitedArea(Animal[] animals)
         {
             Dialog.PrintHeader("Животные из одной местности");
             string[] habitatArray = { "евразия", "африка", "австралия", "южная америка", "антарктида", "северная америка" };
             Console.WriteLine("Места обитания: Евразия, Африка, Австралия, Южная Америка, Антарктида, Северная Америка\n");
             bool isCorrect = false;
-            int animalCount = 0;
             string choice;
             TextInfo capitalized = CultureInfo.CurrentCulture.TextInfo;
             do
@@ -258,28 +212,19 @@ namespace LabWork10
                 }
             } while (!isCorrect);
 
-            Animal[] animalsHabitat = new Animal[animals.Length];
-            for (int i = 0; i < animals.Length; i++)
-            {
-                if (animals[i].Habitat.ToLower() == choice.ToLower())
-                {
-                    animalsHabitat[i] = animals[i];
-                    animalCount++;
-                }
-            }
+            Animal[] inhabited = AnimalQuery.InhabitedArea(animals, choice);
 
-            switch (animalCount)
+            switch (inhabited.Length)
             {
                 case 0:
                     Dialog.ColorText("В зоопарке нет животных из указанной местности", "red");
                     break;
                 default:
-                    
                     Dialog.ColorText($"\n{capitalized.ToTitleCase(choice.ToLower())} - естественная среда " +
-                        $"обитания для {animalCount} животных(-ого):", "green");
-                    foreach (object obj in animalsHabitat)
+                        $"обитания для {inhabited.Length} животных(-ого):", "green");
+                    foreach (object obj in inhabited)
                     {
-                        Animal animal = obj as Animal;
+                        Animal? animal = obj as Animal;
                         if (animal != null)
                         {
                             animal.Show();
@@ -287,7 +232,6 @@ namespace LabWork10
                     }
                     break;
             }
-            
             Dialog.BackMessage();
             return;
 

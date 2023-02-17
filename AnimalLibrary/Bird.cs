@@ -44,15 +44,15 @@ namespace AnimalLibrary
         public override void Init(string welcomeString = "Умеет ли птица летать?")
         {
             base.Init("птицы");
-            this.flyAbility = Dialog.EnterBool(welcomeString);
+            FlyAbility = Dialog.EnterBool(welcomeString);
         }
 
         public override void RandomInit()
         {
-            this.name = birdArray[random.Next(birdArray.Length)];
-            this.age = random.Next(1, 20);
-            this.habitat = habitatArray[random.Next(habitatArray.Length)];
-            this.flyAbility = Convert.ToBoolean(random.Next(0, 2));
+            Name = birdArray[random.Next(birdArray.Length)];
+            Age = random.Next(1, 20);
+            Habitat = habitatArray[random.Next(habitatArray.Length)];
+            FlyAbility = Convert.ToBoolean(random.Next(0, 2));
 
         }
 

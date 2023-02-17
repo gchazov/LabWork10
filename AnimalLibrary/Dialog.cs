@@ -40,7 +40,7 @@ namespace AnimalLibrary
 
                 catch (FormatException)
                 {
-                    ColorText("Введённое значение имеет неверный фор-мат данных! Попробуйте ещё раз...");
+                    ColorText("Введённое значение имеет неверный формат данных! Попробуйте ещё раз...");
                 }
             } while (!isParsed);
             return number;

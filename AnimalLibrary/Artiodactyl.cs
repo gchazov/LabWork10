@@ -51,11 +51,11 @@ namespace AnimalLibrary
 
         public override void RandomInit()
         {
-            this.name = artiArray[random.Next(artiArray.Length)];
-            this.age = random.Next(1, 20);
-            this.habitat = habitatArray[random.Next(habitatArray.Length)];
-            this.isWoolen = Convert.ToBoolean(random.Next(0, 2));
-            this.hornStyle = hornStyles[random.Next(hornStyles.Length)];
+            Name = artiArray[random.Next(artiArray.Length)];
+            Age = random.Next(1, 20);
+            Habitat = habitatArray[random.Next(habitatArray.Length)];
+            IsWoolen = Convert.ToBoolean(random.Next(0, 2));
+            HornStyle = hornStyles[random.Next(hornStyles.Length)];
         }
 
         public override bool Equals(object obj)

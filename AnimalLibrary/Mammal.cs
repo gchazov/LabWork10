@@ -41,18 +41,18 @@ namespace AnimalLibrary
 
         public override void Init(string name = "млекопитающего")
         {
-            this.name = Dialog.EnterString($"Введите название {name}:", false, true);
-            this.age = Dialog.EnterNumber($"Введите возраст {name}:", 1, 99);
-            this.habitat = Dialog.EnterString($"Введите ареал обитания {name}:", true, true);
-            this.isWoolen = Dialog.EnterBool("Покрыто ли животное шерстью?");
+            Name = Dialog.EnterString($"Введите название {name}:", false, true);
+            Age = Dialog.EnterNumber($"Введите возраст {name}:", 1, 99);
+            Habitat = Dialog.EnterString($"Введите ареал обитания {name}:", true, true);
+            IsWoolen = Dialog.EnterBool("Покрыто ли животное шерстью?");
         }
 
         public override void RandomInit()
         {
-            this.name = mammalArray[random.Next(mammalArray.Length)];
-            this.age = random.Next(1, 20);
-            this.habitat = habitatArray[random.Next(habitatArray.Length)];
-            this.isWoolen = Convert.ToBoolean(random.Next(0, 2));
+            Name = mammalArray[random.Next(mammalArray.Length)];
+            Age = random.Next(1, 20);
+            Habitat = habitatArray[random.Next(habitatArray.Length)];
+            IsWoolen = Convert.ToBoolean(random.Next(0, 2));
         }
 
 
