@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AnimalLibrary;
+using LabWork10;
 
 namespace TestAnimalLibrary
 {

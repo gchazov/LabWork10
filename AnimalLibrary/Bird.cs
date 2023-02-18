@@ -41,10 +41,10 @@ namespace AnimalLibrary
          с помощью ключ. слова override и лексемы base (обращение к
          суперклассу)
         */
-        public override void Init(string welcomeString = "Умеет ли птица летать?")
+        public override void Init()
         {
-            base.Init("птицы");
-            FlyAbility = Dialog.EnterBool(welcomeString);
+            base.Init();
+            FlyAbility = Dialog.EnterBool("Умеет ли птица летать?");
         }
 
         public override void RandomInit()

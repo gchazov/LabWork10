@@ -8,7 +8,8 @@ namespace AnimalLibrary
 {
     public interface IInit
     {
-        void Init(string name);
+        void Init();
         void RandomInit();
+        void Show();
     }
 }

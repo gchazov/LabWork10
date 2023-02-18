@@ -16,7 +16,8 @@ namespace LabWork10
                 "2. Просмотреть элементы массива объектов\n" +
                 "3. Выполнить запрос\n" +
                 "4. Выполнить сортировку массива\n" +
-                "5. Завершить работу программы");
+                "5. Работа с массивом IInit\n" +
+                "6. Завершить работу программы\n");
         }
 
         //создания массива с помощью ДСЧ (по заданию)
@@ -75,10 +76,8 @@ namespace LabWork10
                 Dialog.BackMessage();
                 return;
             }
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"В зоопарке на данный момент обитает(-ют)" +
-                $" следующее(-ие) {animals.Length} животное(-ых):\n");
-            Console.ResetColor();
+            Dialog.ColorText($"В зоопарке на данный момент обитает(-ют)" +
+                $" следующее(-ие) {animals.Length} животное(-ых):\n", "green");
             for (int i = 0; i < animals.Length; i++)
             {
                 animals[i].Show();
@@ -181,7 +180,7 @@ namespace LabWork10
             TextInfo capitalized = CultureInfo.CurrentCulture.TextInfo;
             do
             {
-                choice = Dialog.EnterString("Введите один из вышеперечисленных ареалов обитания животных:", false, true);
+                choice = Dialog.EnterString("Введите один из вышеперечисленных ареалов обитания животных:", true);
                 if (habitatArray.Contains(choice.ToLower()))
                 {
                     isCorrect = true;
@@ -250,15 +249,201 @@ namespace LabWork10
             }
         }
 
+        //заполнение IInit[] путём ввода с клавиатуры
+        public static void KeyBoardIInit(ref IInit[] array)
+        {
+            Dialog.PrintHeader("Ввод значений с клавиатуры");
+            int animalCount = Dialog.EnterNumber("Введите количество объектов типа Animal:", 0, 5);
+            int birdCount = Dialog.EnterNumber("Введите количество объектов типа Bird:", 0, 5);
+            int mammalCount = Dialog.EnterNumber("Введите количество объектов типа Mammal:", 0, 5);
+            int artiodactylCount = Dialog.EnterNumber("Введите количество объектов типа Artiodactyl:", 0, 5);
+            int carCount = Dialog.EnterNumber("Введите количество объектов типа Car:", 0, 5);
+            array = new IInit[animalCount + birdCount + mammalCount + artiodactylCount + carCount];
+            if (array.Length == 0)
+            {
+                Dialog.PrintHeader("Ввод значений с клавиатуры");
+                Dialog.ColorText("Пустой массив успешно создан", "green");
+                Dialog.BackMessage();
+                return;
+            }
+
+            Dialog.PrintHeader("Ввод значений с клавиатуры");
+            Console.WriteLine("Поочерёдно вводите параметры объектов типа Animal");
+            for (int i = 0; i < animalCount; i++)
+            {
+                Dialog.ColorText($"\n{i + 1}-й элемент массива", "yellow");
+                array[i] = new Animal();
+                array[i].Init();
+            }
+
+            Dialog.PrintHeader("Ввод значений с клавиатуры");
+            Console.WriteLine("Поочерёдно вводите параметры объектов типа Bird");
+            for (int i = animalCount; i < animalCount + birdCount; i++)
+            {
+                Dialog.ColorText($"\n{i + 1}-й элемент массива", "yellow");
+                array[i] = new Bird();
+                array[i].Init();
+            }
+
+            Dialog.PrintHeader("Ввод значений с клавиатуры");
+            Console.WriteLine("Поочерёдно вводите параметры объектов типа Mammal");
+            for (int i = animalCount + birdCount; i < mammalCount + birdCount + animalCount; i++)
+            {
+                Dialog.ColorText($"\n{i + 1}-й элемент массива", "yellow");
+                array[i] = new Mammal();
+                array[i].Init();
+            }
+
+            Dialog.PrintHeader("Ввод значений с клавиатуры");
+            Console.WriteLine("Поочерёдно вводите параметры объектов типа Artiodactyl");
+            for (int i = mammalCount + birdCount + animalCount; i < mammalCount + birdCount + animalCount + artiodactylCount; i++)
+            {
+                Dialog.ColorText($"\n{i + 1}-й элемент массива", "yellow");
+                array[i] = new Artiodactyl();
+                array[i].Init();
+            }
+
+            Dialog.PrintHeader("Ввод значений с клавиатуры");
+            Console.WriteLine("Поочерёдно вводите параметры объектов типа Car");
+            for (int i = array.Length - carCount; i < array.Length; i++)
+            {
+                Dialog.ColorText($"{i + 1}-й элемент массива", "yellow");
+                array[i] = new Car();
+                array[i].Init();
+            }
+
+            Dialog.PrintHeader("Ввод значений с клавиатуры");
+            Dialog.ColorText($"Массив из {array.Length} объекта(-ов) успешно создан", "green");
+            Dialog.BackMessage();
+            return;
+        }
+
+        //заполнение IInit[] с помощью ДСЧ
+        public static void RandomIInit(ref IInit[] array)
+        {
+            Dialog.PrintHeader("Генерация объектов с помощью ДСЧ");
+            int animalCount = Dialog.EnterNumber("Введите количество объектов типа Animal:", 0, 10);
+            int birdCount = Dialog.EnterNumber("Введите количество объектов типа Bird:", 0, 10);
+            int mammalCount = Dialog.EnterNumber("Введите количество объектов типа Mammal:", 0, 10);
+            int artiodactylCount = Dialog.EnterNumber("Введите количество объектов типа Artiodactyl:", 0, 10);
+            int carCount = Dialog.EnterNumber("Введите количество объектов типа Car:", 0, 10);
+            array = new IInit[animalCount + birdCount + mammalCount + artiodactylCount + carCount];
+            if (array.Length == 0)
+            {
+                Dialog.PrintHeader("Генерация объектов с помощью ДСЧ");
+                Dialog.ColorText("Пустой массив успешно создан", "green");
+                Dialog.BackMessage();
+                return;
+            }
+
+            for (int i = 0; i < animalCount; i++)
+            {
+                array[i] = new Animal();
+                array[i].RandomInit();
+            }
+
+            for (int i = animalCount; i < animalCount + birdCount; i++)
+            {
+                array[i] = new Bird();
+                array[i].RandomInit();
+            }
+
+            for (int i = animalCount + birdCount; i < mammalCount + birdCount + animalCount; i++)
+            {
+                array[i] = new Mammal();
+                array[i].RandomInit();
+            }
+
+            for (int i = mammalCount + birdCount + animalCount; i < mammalCount + birdCount + animalCount + artiodactylCount; i++)
+            {
+                array[i] = new Artiodactyl();
+                array[i].RandomInit();
+            }
+
+            for (int i = array.Length - carCount; i < array.Length; i++)
+            {
+                array[i] = new Car();
+                array[i].RandomInit();
+            }
+            Dialog.PrintHeader("Генерация объектов с помощью ДСЧ");
+            Dialog.ColorText($"Массив из {array.Length} объекта(-ов) успешно создан", "green");
+            Dialog.BackMessage();
+            return;
+        }
+
+        //меню создания массива IInit[]
+        public static void CreateIInitArrayMenu(ref IInit[] array)
+        {
+            Dialog.PrintHeader("Создание массива интерфейса IInit");
+            Console.WriteLine("1. Ввод параметров объектов с клавиатуры\n" +
+                "2. Генерация объектов с помощью ДСЧ\n" +
+                "3. Назад\n");
+            int choice = Dialog.EnterNumber("Выберите пункт меню:", 1, 3);
+            switch (choice)
+            {
+                case 1:
+                    KeyBoardIInit(ref array);
+                    break;
+                case 2:
+                    RandomIInit(ref array);
+                    break;
+                case 3:
+                    return;
+            }
+        }
+
+        public static void ShowIInitArray(IInit[] array)
+        {
+            Dialog.PrintHeader("Печать массива на экран");
+            if (array.Length == 0)
+            {
+                Dialog.ColorText("Массив объектов пуст!", "green");
+                Dialog.BackMessage();
+                return;
+            }
+
+            Dialog.ColorText($"Массив состоит из {array.Length} элемента(-ов):\n", "green");
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i].Show();
+            }
+            Dialog.BackMessage();
+            return;
+        }
+
+        //меню для работы с массивом IInit
+        public static void IInitMenu(ref IInit[] array)
+        {
+            do
+            {
+                Dialog.PrintHeader("Работа с массивом интерфейса IInit");
+                Console.WriteLine("1. Создать массив\n" +
+                    "2. Просмотреть массив\n" +
+                    "3. Назад\n");
+                int choice = Dialog.EnterNumber("Выберите пункт меню:", 1, 3);
+                switch (choice)
+                {
+                    case 1:
+                        CreateIInitArrayMenu(ref array);
+                        break;
+                    case 2:
+                        ShowIInitArray(array);
+                        break;
+                    case 3:
+                        return;
+                }
+            } while (true);
+        }
+
         //выполнение функций и вывод менюшек
-        public static void Run(Animal[] animals)
+        public static void Run(Animal[] animals, IInit[] array)
         {
             bool runProgram = true;
             do
             {
                 Console.Clear();
                 MainMenu();
-                int choice = Dialog.EnterNumber("Выберите один из пунктов меню:", 1, 5);
+                int choice = Dialog.EnterNumber("Выберите один из пунктов меню:", 1, 6);
                 switch (choice)
                 {
                     case 1:
@@ -274,6 +459,9 @@ namespace LabWork10
                         SortMenu(ref animals);
                         break;
                     case 5:
+                        IInitMenu(ref array);
+                        break;
+                    case 6:
                         runProgram = false;
                         break;
 
@@ -288,7 +476,8 @@ namespace LabWork10
         {
             Console.WindowWidth = 140;
             Animal[] animals = new Animal[0];
-            Run(animals);
+            IInit[] array = new IInit[0];
+            Run(animals, array);
         }
     }
 }

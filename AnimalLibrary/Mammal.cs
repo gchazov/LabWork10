@@ -39,11 +39,9 @@ namespace AnimalLibrary
             IsWoolen = isWoolen;
         }
 
-        public override void Init(string name = "млекопитающего")
+        public override void Init()
         {
-            Name = Dialog.EnterString($"Введите название {name}:", false, true);
-            Age = Dialog.EnterNumber($"Введите возраст {name}:", 1, 99);
-            Habitat = Dialog.EnterString($"Введите ареал обитания {name}:", true, true);
+            base.Init();
             IsWoolen = Dialog.EnterBool("Покрыто ли животное шерстью?");
         }
 

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalLibrary", "AnimalLibrary.csproj", "{05B94105-5412-49CA-9AB1-B4F57EE6BDD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalLibrary", "AnimalLibrary.csproj", "{05B94105-5412-49CA-9AB1-B4F57EE6BDD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAnimalLibrary", "..\TestAnimalLibrary\TestAnimalLibrary.csproj", "{B4C4D03B-C74A-4C98-B81B-006C1F1FEBD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "..\UnitTests\UnitTests.csproj", "{B4C4D03B-C74A-4C98-B81B-006C1F1FEBD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabWork10", "..\Lab10\LabWork10.csproj", "{244871EA-9FD4-4344-865B-F146B0A4D654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabWork10", "..\Lab10\LabWork10.csproj", "{244871EA-9FD4-4344-865B-F146B0A4D654}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using LabWork10;
 namespace TestAnimalLibrary
 {
     //тестирование класса Mammal

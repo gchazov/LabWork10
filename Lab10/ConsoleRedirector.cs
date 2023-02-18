@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalLibrary
+namespace LabWork10
 {
     //Класс для тестирования вывода на консоль
     public class ConsoleRedirector

@@ -88,12 +88,12 @@
         }
 
         //инициализация с клавиатуры (если необходим ввод с клавиатуры)
-        public virtual void Init(string name = "животного")
+        public virtual void Init()
         {
 
-            Name = Dialog.EnterString($"Введите название {name}:", false, true);
-            Age = Dialog.EnterNumber($"Введите возраст {name}:", 1, 100);
-            Habitat = Dialog.EnterString($"Введите возраст {name}:", true, true);
+            Name = Dialog.EnterString("Введите название:", true);
+            Age = Dialog.EnterNumber("Введите возраст:", 1, 20);
+            Habitat = Dialog.EnterString("Введите ареал обитания:", true);
         }
 
         //генерация объекта с помощью ДСЧ

@@ -42,10 +42,10 @@ namespace AnimalLibrary
             HornStyle = hornStyle;
         }
 
-        public override void Init(string welcomeString = "Какой вид рогов у животного?")
+        public override void Init()
         {
-            base.Init("парнокопытного");
-            HornStyle = Dialog.EnterString(welcomeString, false, true);
+            base.Init();
+            HornStyle = Dialog.EnterString("Какой вид рогов у парнокопытного?", true);
 
         }
 

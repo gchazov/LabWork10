@@ -13,6 +13,7 @@ namespace AnimalLibrary
     //класс создан только для упрощения ввода-вывода, не больше
     public class Dialog
     {
+        //ввод числа
         public static int EnterNumber(string welcomeString, int left, int right)
         {
             int number = 0;
@@ -45,31 +46,24 @@ namespace AnimalLibrary
             } while (!isParsed);
             return number;
         }
-
-        public static string EnterString(string welcomeString, bool containsNum, bool notEmpty)
+        
+        //ввод строки
+        public static string EnterString(string welcomeString, bool notEmpty)
         {
             Console.WriteLine(welcomeString);
             string str = "";
             bool isParsed = false;
             do
             {
-                bool isNumeric = false;
                 bool isNotEmpty = true;
                 str = Console.ReadLine();
-                foreach (char symbol in str)
-                {
-                    if (char.IsDigit(symbol))
-                    {
-                        isNumeric = true;
-                        break;
-                    }
-                }
+
                 if (str == "")
                 {
                     isNotEmpty = false;
                 }
 
-                if (containsNum == isNumeric && notEmpty == isNotEmpty)
+                if (notEmpty == isNotEmpty )
                 {
                     isParsed = true;
                 }
@@ -81,12 +75,14 @@ namespace AnimalLibrary
             return str;
         }
 
+        //ввод булевой переменной
         public static bool EnterBool(string welcomeString)
         {
             bool result = false;
             bool isParsed = false;
             do
             {
+                Console.WriteLine(welcomeString + " (True/False)");
                 isParsed = bool.TryParse(Console.ReadLine(), out result);
                 if (!isParsed)
                 {
@@ -96,12 +92,14 @@ namespace AnimalLibrary
             return result;
         }
         
+        //печать красивого заголовка
         public static void PrintHeader(string header)
         {
             Console.Clear();
             ColorText("_________/" + header.ToUpper() + @"\_________" + "\n", "cyan");
         }
 
+        //печать цветного текста
         public static void ColorText(string text, string colorizing = "red")
         {
             string color = colorizing.ToLower();
@@ -127,6 +125,7 @@ namespace AnimalLibrary
             Console.ResetColor();
         }
 
+        //сообщение о возвращении в меню
         public static void BackMessage()
         {
             Console.WriteLine("\nНажмите Enter для возвращения в предыдущее меню...");

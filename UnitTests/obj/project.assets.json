@@ -1107,11 +1107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\cheyz\\LabWork10\\UnitTests\\UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\UnitTests.csproj",
+      "projectPath": "C:\\Users\\cheyz\\LabWork10\\UnitTests\\UnitTests.csproj",
       "packagesPath": "C:\\Users\\cheyz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cheyz\\LabWork10\\TestAnimalLibrary\\obj\\",
+      "outputPath": "C:\\Users\\cheyz\\LabWork10\\UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cheyz\\AppData\\Roaming\\NuGet\\NuGet.Config",
