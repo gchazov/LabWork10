@@ -411,7 +411,7 @@ namespace LabWork10
             return;
         }
 
-        //меню для работы с массивом IInit
+        //меню для работы с массивом IInit[]
         public static void IInitMenu(ref IInit[] array)
         {
             do
