@@ -86,14 +86,14 @@
          */
         public virtual void Show()
         {
-            Console.WriteLine($"Животное: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; ID в зоопарке {id}");
+            Console.WriteLine($"Животное: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; ID в зоопарке: {id}");
         }
 
         //инициализация с клавиатуры (если необходим ввод с клавиатуры)
         public virtual void Init()
         {
 
-            Name = Dialog.EnterString("Введите название:", true);
+            Name = Dialog.EnterString("Введите название животного:", true);
             Age = Dialog.EnterNumber("Введите возраст:", 1, 20);
             Habitat = Dialog.EnterString("Введите ареал обитания:", true);
             id.number = Dialog.EnterNumber("Введите ID: ", 0, 1000);

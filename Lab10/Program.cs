@@ -17,7 +17,8 @@ namespace LabWork10
                 "3. Выполнить запрос\n" +
                 "4. Выполнить сортировку массива\n" +
                 "5. Работа с массивом IInit\n" +
-                "6. Завершить работу программы\n");
+                "6. Копирование и клонирование объекта Animal\n" +
+                "7. Завершить работу программы\n");
         }
 
         //создания массива с помощью ДСЧ (по заданию)
@@ -435,14 +436,84 @@ namespace LabWork10
             } while (true);
         }
 
+        //копирование объекта (демонстрация работы)
+        public static void CopyMethod()
+        {
+            Dialog.PrintHeader("Поверхностное копирование");
+            Dialog.ColorText("Создание объекта", "yellow");
+            Animal animal1 = new Animal();
+            animal1.Init();
+            Dialog.ColorText("\nПроизводится поверхностное копирование объекта...", "yellow");
+            Animal animal2 = (Animal)animal1.ShallowCopy();
+            Dialog.ColorText("Копирование произведено успешно\n", "green");
+
+            Dialog.ColorText("Изменение параметра \"ID в зоопарке\" у исходного объекта", "yellow");
+            animal1.id.number = Dialog.EnterNumber("Введите новое значение параметра:", 0, 1000);
+
+            Dialog.PrintHeader("Сравнение объектов при поверхностном копировании");
+            Dialog.ColorText("Исходный объект:", "yellow");
+            animal1.Show();
+            Dialog.ColorText("Объект-копия:");
+            animal2.Show();
+
+            Dialog.BackMessage();
+        }
+
+        //клонирование объекта (демонтрация работы)
+        public static void CloneMethod()
+        {
+            Dialog.PrintHeader("Клонирование");
+            Dialog.ColorText("Создание объекта", "yellow");
+            Animal a1 = new Animal();
+            a1.Init();
+            Dialog.ColorText("\nПроизводится клонирование объекта...", "yellow");
+            Animal a2 = (Animal)a1.Clone();
+            Dialog.ColorText("Клонирование произведено успешно\n", "green");
+
+            Dialog.ColorText("Изменение параметра \"ID в зоопарке\" у исходного объекта", "yellow");
+            a1.id.number = Dialog.EnterNumber("Введите новое значение параметра:", 0, 1000);
+
+            Dialog.PrintHeader("Сравнение объектов при клонировании");
+            Dialog.ColorText("Исходный объект:", "yellow");
+            a1.Show();
+            Dialog.ColorText("Объект-клон:");
+            a2.Show();
+
+            Dialog.BackMessage();
+        }
+
+        //меню для работы с копированием и клонированием
+        public static void CopyCloneMenu()
+        {
+            do
+            {
+                Dialog.PrintHeader("Копирование и клонирование объекта типа Animal");
+                Console.WriteLine("1. Поверхностное копирования объекта\n" +
+                    "2. Клонирование объекта\n" +
+                    "3. Назад\n");
+                int choice = Dialog.EnterNumber("Выберите пункт меню:", 1, 3);
+                switch (choice)
+                {
+                    case 1:
+                        CopyMethod();
+                        break;
+                    case 2:
+                        CloneMethod();
+                        break;
+                    case 3:
+                        return;
+                }
+            }while (true);
+        }
+
         //выполнение функций и вывод менюшек
         public static void Run(Animal[] animals, IInit[] array)
         {
-            bool runProgram = true;
+            bool runProg = true;
             do
             {
                 MainMenu();
-                int choice = Dialog.EnterNumber("Выберите один из пунктов меню:", 1, 6);
+                int choice = Dialog.EnterNumber("Выберите один из пунктов меню:", 1, 7);
                 switch (choice)
                 {
                     case 1:
@@ -461,12 +532,14 @@ namespace LabWork10
                         IInitMenu(ref array);
                         break;
                     case 6:
-                        runProgram = false;
+                        CopyCloneMenu();
                         break;
-
+                    case 7:
+                        runProg = false;
+                        break;
                 }
-                Console.Clear();
-            } while (runProgram);
+            } while (runProg);
+            Dialog.PrintHeader("завершение работы");
             Dialog.ColorText("Программа успешно завершила свою работу. Всего хорошего!", "cyan");
 
         }
