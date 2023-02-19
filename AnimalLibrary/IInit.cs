@@ -11,6 +11,6 @@ namespace AnimalLibrary
     {
         void Init();
         void RandomInit();
-        void Show();
+        void Show(); //метод для удобного вывода в консоль
     }
 }
