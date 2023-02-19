@@ -91,6 +91,38 @@ namespace TestAnimalLibrary
             string animal1 = "Крокодил";
             Animal animal2 = new Animal("Крокодил", 2, "Айдохья");
             Assert.IsFalse(animal2.Equals(animal1));
-        }       
+        }
+
+        [TestMethod]
+        public void TestAnimalId() //тест поля id
+        {
+            AnimalId id = new AnimalId(55);
+            Assert.IsFalse(id.Equals(1));
+        }
+
+        [TestMethod]
+        public void TestShallowCopy() //пов. копирование
+        {
+            Animal expected = new Animal();
+            expected.RandomInit();
+            Animal actual = new Animal();
+            actual.RandomInit();
+            actual = (Animal)expected.ShallowCopy();
+            expected.id.number = 1;
+            Assert.AreEqual(expected.id, actual.id);
+        }
+
+        [TestMethod]
+        public void TestClone() //глубокое копирование
+        {
+            Animal expected = new Animal();
+            expected.RandomInit();
+            Animal actual = new Animal();
+            actual.RandomInit();
+            actual = (Animal)expected.Clone();
+            actual.id.number = 1;
+            Assert.AreNotEqual(expected.id, actual.id);
+        }
+
     }
 }

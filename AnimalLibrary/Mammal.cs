@@ -51,6 +51,7 @@ namespace AnimalLibrary
             Age = random.Next(1, 20);
             Habitat = habitatArray[random.Next(habitatArray.Length)];
             IsWoolen = Convert.ToBoolean(random.Next(0, 2));
+            id.number = random.Next(0, 1000);
         }
 
 
@@ -68,11 +69,11 @@ namespace AnimalLibrary
 
         public new void Print()
         {
-            Console.WriteLine($"Млекопитающее: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}");
+            Console.WriteLine($"Млекопитающее: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}; ID в зоопарке: {id}");
         }
         public override void Show()
         {
-            Console.WriteLine($"Млекопитающее: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}");
+            Console.WriteLine($"Млекопитающее: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}; ID в зоопарке: {id}");
         }
     }
 }

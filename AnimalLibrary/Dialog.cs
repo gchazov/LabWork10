@@ -82,11 +82,34 @@ namespace AnimalLibrary
             bool isParsed = false;
             do
             {
-                Console.WriteLine(welcomeString + " (True/False)");
-                isParsed = bool.TryParse(Console.ReadLine(), out result);
+                Console.WriteLine(welcomeString);
+                string buf = Console.ReadLine();
+                isParsed = bool.TryParse(buf, out result);
                 if (!isParsed)
                 {
-                    ColorText("Введённое значение не является логическим! Попробуйте ещё раз...");
+                    switch (buf.ToLower())
+                    {
+                        case "да":
+                            result = true;
+                            isParsed = true;
+                            break;
+                        case "нет":
+                            result = true;
+                            isParsed = true;
+                            break;
+                        case "yes":
+                            result = true;
+                            isParsed = true;
+                            break;
+                        case "no":
+                            result = true;
+                            isParsed = true;
+                            break;
+                        default:
+                            ColorText("Введённое значение не является логическим! Попробуйте ещё раз...");
+                            break;
+
+                    }
                 }
             } while (!isParsed);
             return result;

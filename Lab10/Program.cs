@@ -441,7 +441,6 @@ namespace LabWork10
             bool runProgram = true;
             do
             {
-                Console.Clear();
                 MainMenu();
                 int choice = Dialog.EnterNumber("Выберите один из пунктов меню:", 1, 6);
                 switch (choice)
@@ -474,7 +473,7 @@ namespace LabWork10
 
         static void Main(string[] args)
         {
-            Console.WindowWidth = 140;
+            Console.WindowWidth = 160;
             Animal[] animals = new Animal[0];
             IInit[] array = new IInit[0];
             Run(animals, array);

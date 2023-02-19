@@ -12,8 +12,9 @@ namespace CarsTesting
     [TestClass]
     public class CarTesting
     {
-        string[] carArray = {"LADA 2114", "BMW M5 e60", "Toyota Camty XV70",
-        "Audi RS6 C7", "Mercedes-Benz S-Klasse w223", "Volkswagen Toureg"};
+        string[] carArray = {"ВАЗ 2114", "BMW M5 e60", "Toyota Camry XV70",
+        "Audi RS6 C7", "Mercedes-Benz S-Klasse w223", "Volkswagen Toureg",
+        "Honda Civic Type-R", "Toyota Mark II", "ВАЗ 2105", "Toyota GT86"};
 
         [TestMethod]
         public void TestEmptyCtor() //тестирование пустого конструктора

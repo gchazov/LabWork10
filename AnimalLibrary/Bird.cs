@@ -53,7 +53,7 @@ namespace AnimalLibrary
             Age = random.Next(1, 20);
             Habitat = habitatArray[random.Next(habitatArray.Length)];
             FlyAbility = Convert.ToBoolean(random.Next(0, 2));
-
+            id.number = random.Next(0, 1000);
         }
 
 
@@ -71,12 +71,12 @@ namespace AnimalLibrary
 
         public new void Print()
         {
-            Console.WriteLine($"Птица: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Умение летать: {FlyAbility}");
+            Console.WriteLine($"Птица: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Умение летать: {FlyAbility}; ID в зоопарке: {id}");
         }
 
         public override void Show()
         {
-            Console.WriteLine($"Птица: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Умение летать: {FlyAbility}");
+            Console.WriteLine($"Птица: {Name}; Возраст: {Age}; Ареал обитания: {Habitat}; Умение летать: {FlyAbility}; ID в зоопарке: {id}");
         }
     }
 }

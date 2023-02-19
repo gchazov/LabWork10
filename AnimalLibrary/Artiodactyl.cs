@@ -56,6 +56,7 @@ namespace AnimalLibrary
             Habitat = habitatArray[random.Next(habitatArray.Length)];
             IsWoolen = Convert.ToBoolean(random.Next(0, 2));
             HornStyle = hornStyles[random.Next(hornStyles.Length)];
+            id.number = random.Next(0, 1000);
         }
 
         public override bool Equals(object obj)
@@ -74,13 +75,13 @@ namespace AnimalLibrary
         public new void Print()
         {
             Console.WriteLine($"Парнокопытное: {Name}; Возраст: {Age}; " +
-                $"Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}; Вид рогов: {HornStyle}");
+                $"Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}; Вид рогов: {HornStyle}; ID в зоопарке: {id}");
         }
 
         public override void Show()
         {
             Console.WriteLine($"Парнокопытное: {Name}; Возраст: {Age}; " +
-                $"Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}; Вид рогов: {HornStyle}");
+                $"Ареал обитания: {Habitat}; Покрыто шерстью: {isWoolen}; Вид рогов: {HornStyle}; ID в зоопарке: {id}");
         }
     }
 }
