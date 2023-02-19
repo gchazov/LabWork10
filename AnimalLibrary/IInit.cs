@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalLibrary
 {
+    //интерфейс, реализуемый в программе
     public interface IInit
     {
         void Init();

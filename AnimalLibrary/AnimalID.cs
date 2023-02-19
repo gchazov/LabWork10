@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalLibrary
 {
+    //класс-id животного в зоопарке
     public class AnimalId
     {
         public int number;
