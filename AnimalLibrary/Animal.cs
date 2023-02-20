@@ -1,6 +1,6 @@
 ﻿namespace AnimalLibrary
 {
-    public class Animal: IInit, IComparable, ICloneable
+    public class Animal: IInit, IShow, IComparable, ICloneable
     {
         /*описание полей, вспомогательных массивов
          такое описание есть в каждом наследуемом классе

@@ -16,9 +16,10 @@ namespace LabWork10
                 "2. Просмотреть элементы массива объектов\n" +
                 "3. Выполнить запрос\n" +
                 "4. Выполнить сортировку массива\n" +
-                "5. Работа с массивом IInit\n" +
-                "6. Копирование и клонирование объекта Animal\n" +
-                "7. Завершить работу программы\n");
+                "5. Поиск в отсортированном массиве\n" +
+                "6. Работа с массивом IInit\n" +
+                "7. Копирование и клонирование объекта Animal\n" +
+                "8. Завершить работу программы\n");
         }
 
         //создания массива с помощью ДСЧ (по заданию)
@@ -94,9 +95,7 @@ namespace LabWork10
 
             if (animals.Length == 0)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Для пустого зоопарка операции запросов недоступны!");
-                Console.ResetColor();
+                Dialog.ColorText("Для пустого зоопарка операция поиска недоступна!", "red");
                 Dialog.BackMessage();
                 return;
             }
@@ -506,6 +505,80 @@ namespace LabWork10
             }while (true);
         }
 
+        //поиск в массиве по ключу (название или возраст)
+        public static void SearchAndSort(ref Animal[] animals, string param = "name")
+        {
+            switch (param)
+            {
+                case "name":
+                    Dialog.PrintHeader("Поиск по названию");
+                    Array.Sort(animals);
+                    Dialog.ColorText("Массив отсортирован по именам!", "yellow");
+                    string animalName = Dialog.EnterString("Введите название животного:", true);
+                    Animal animalFound = Array.Find(animals, animal => animal.Name.ToLower() == animalName.ToLower());
+                    if (animalFound != null)
+                    {
+                        Dialog.ColorText("\nНайдено животное:\n", "green");
+                        animalFound.Show();
+                    }
+                    else
+                    {
+                        Dialog.ColorText("Животного с таким названием в зоопарке нет!");
+                    }
+                    break;
+                case "age":
+                    Dialog.PrintHeader("Поиск по возрасту");
+                    Array.Sort(animals, new SortByAge());
+                    Dialog.ColorText("Массив отсортирован по возрастам!", "yellow");
+                    int animalAge = Dialog.EnterNumber("Введите возраст животного:", 1, 20);
+                    Animal searchingAnimal = Array.Find(animals, animal => animal.Age == animalAge);
+                    if (searchingAnimal != null)
+                    {
+                        Dialog.ColorText("\nНайдено животное:\n", "green");
+                        searchingAnimal.Show();
+                    }
+                    else
+                    {
+                        Dialog.ColorText("Животного с таким возрастом в зоопарке нет!");
+                    }
+                    break;
+            }
+            Dialog.BackMessage();
+        }
+
+        //меню для выбора варианта поиска
+        public static void SearchMenu(ref Animal[] animals)
+        {
+            Dialog.PrintHeader("поиск в отсортированном массиве");
+
+            if (animals.Length == 0)
+            {
+                Dialog.ColorText("Для пустого зоопарка операция поиска недоступна!", "red");
+                Dialog.BackMessage();
+                return;
+            }
+
+            do
+            {
+                Dialog.PrintHeader("поиск в отсортированном массиве");
+                Console.WriteLine("1. Поиск по названию животного\n" +
+                    "2. Поиск по возрасту животного\n" +
+                    "3. Назад\n");
+                int choice = Dialog.EnterNumber("Выберите один из запросов:", 1, 3);
+                switch (choice)
+                {
+                    case 1:
+                        SearchAndSort(ref animals, "name");
+                        break;
+                    case 2:
+                        SearchAndSort(ref animals, "age");
+                        break;
+                    case 3:
+                        return;
+                }
+            } while (true);
+        }
+
         //выполнение функций и вывод менюшек
         public static void Run(Animal[] animals, IInit[] array)
         {
@@ -513,7 +586,7 @@ namespace LabWork10
             do
             {
                 MainMenu();
-                int choice = Dialog.EnterNumber("Выберите один из пунктов меню:", 1, 7);
+                int choice = Dialog.EnterNumber("Выберите один из пунктов меню:", 1, 8);
                 switch (choice)
                 {
                     case 1:
@@ -529,12 +602,15 @@ namespace LabWork10
                         SortMenu(ref animals);
                         break;
                     case 5:
-                        IInitMenu(ref array);
+                        SearchMenu(ref animals);
                         break;
                     case 6:
-                        CopyCloneMenu();
+                        IInitMenu(ref array);
                         break;
                     case 7:
+                        CopyCloneMenu();
+                        break;
+                    case 8:
                         runProg = false;
                         break;
                 }

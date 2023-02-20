@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 namespace AnimalLibrary
 {
     //интерфейс, реализуемый в программе
-    public interface IInit
+    public interface IInit: IShow
     {
         void Init();
         void RandomInit();
-        void Show(); //метод для удобного вывода в консоль
     }
 }

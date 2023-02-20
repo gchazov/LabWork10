@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace AnimalLibrary
 {
     //класс, не относящийся к иерархии Library, но реализующий IInit
-    public class Car:IInit
+    public class Car:IInit, IShow
     {
         string name;
         int maxSpeed;
