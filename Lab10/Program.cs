@@ -16,7 +16,7 @@ namespace LabWork10
                 "2. Просмотреть элементы массива объектов\n" +
                 "3. Выполнить запрос\n" +
                 "4. Выполнить сортировку массива\n" +
-                "5. Поиск в отсортированном массиве\n" +
+                "5. Бинарный поиск в отсортированном массиве\n" +
                 "6. Работа с массивом IInit\n" +
                 "7. Копирование и клонирование объекта Animal\n" +
                 "8. Завершить работу программы\n");
@@ -515,11 +515,14 @@ namespace LabWork10
                     Array.Sort(animals);
                     Dialog.ColorText("Массив отсортирован по именам!", "yellow");
                     string animalName = Dialog.EnterString("Введите название животного:", true);
-                    Animal animalFound = Array.Find(animals, animal => animal.Name.ToLower() == animalName.ToLower());
-                    if (animalFound != null)
+                    Animal animal = new Animal(animalName);
+
+                    //используется компаратор NameComparer
+                    int indexName = Array.BinarySearch(animals, animal, new NameComparer());
+                    if (indexName >= 0)
                     {
                         Dialog.ColorText("\nНайдено животное:\n", "green");
-                        animalFound.Show();
+                        animals[indexName].Show();
                     }
                     else
                     {
@@ -531,11 +534,14 @@ namespace LabWork10
                     Array.Sort(animals, new SortByAge());
                     Dialog.ColorText("Массив отсортирован по возрастам!", "yellow");
                     int animalAge = Dialog.EnterNumber("Введите возраст животного:", 1, 20);
-                    Animal searchingAnimal = Array.Find(animals, animal => animal.Age == animalAge);
-                    if (searchingAnimal != null)
+                    Animal animal1 = new Animal("", animalAge);
+
+                    //используется компаратор AgeComparer
+                    int indexAge = Array.BinarySearch(animals, animal1, new AgeComparer());
+                    if (indexAge >= 0)
                     {
                         Dialog.ColorText("\nНайдено животное:\n", "green");
-                        searchingAnimal.Show();
+                        animals[indexAge].Show();
                     }
                     else
                     {
@@ -549,7 +555,7 @@ namespace LabWork10
         //меню для выбора варианта поиска
         public static void SearchMenu(ref Animal[] animals)
         {
-            Dialog.PrintHeader("поиск в отсортированном массиве");
+            Dialog.PrintHeader("бинарный поиск в отсортированном массиве");
 
             if (animals.Length == 0)
             {
